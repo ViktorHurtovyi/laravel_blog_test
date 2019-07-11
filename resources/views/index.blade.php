@@ -15,6 +15,7 @@
                     @if(Auth::user()->name == $article->author)
                         <div class="col col-3">
                             <a href="{!! route('edit', ['id' => $article->id]) !!}">Редактировать</a>
+                            <a href="{!! route('delete', ['id' => $article->id]) !!}">Удалить</a>
                         </div>
                     @endif
 

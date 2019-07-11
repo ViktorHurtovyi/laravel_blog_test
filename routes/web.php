@@ -22,4 +22,5 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post('/add/request', 'articleController@addRequest')->name('addRequest');
     Route::get('/edit', 'articleController@edit')->where('id', '\d+')->name('edit');
     Route::post('/edit/request', 'articleController@editRequest')->name('editRequest');
+    Route::get('/delete', 'articleController@delete')->where('id', '\d+')->name('delete');
 });

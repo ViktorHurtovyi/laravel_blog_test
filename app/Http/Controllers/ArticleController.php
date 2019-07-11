@@ -41,4 +41,10 @@ class ArticleController extends Controller
         $article = Article::find($request['id'])->update($data);
         return redirect(route('index'));
     }
+
+    public function delete(Request $request)
+    {
+        $article = Article::find($request['id'])->delete();
+        return redirect(route('index'));
+    }
 }
